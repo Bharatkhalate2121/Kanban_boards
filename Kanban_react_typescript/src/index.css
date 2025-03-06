@@ -1,0 +1,56 @@
+.custom-hover:hover {
+    background-color: #edf2ef !important; /* Bootstrap's danger color */
+    color: black !important;
+  }
+
+  .custom-hover-pen:hover {
+    background-color: #edf2ef !important; /* Bootstrap's danger color */
+    transition-duration: 5ms !important;
+    cursor: "pointer" !important;
+    color: #0f274d !important;
+  }
+
+  .custom-hover-bin:hover {
+    background-color: #edf2ef !important; /* Bootstrap's danger color */
+    cursor: "pointer" !important;
+    transition-duration: 5ms !important;
+    color: #80260f !important;
+  }
+
+  .table-responsive {
+    overflow: auto; /* Allows scrolling */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+  }
+  
+  .table-responsive::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Edge, Safari */
+  }
+
+  .alert-transition {
+    transition: opacity 0.3s ease-in-out, transform 0.8s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  
+  .alert-show {
+    opacity: 1;
+    transform: translateY(0); /* Move to normal position */
+  }
+  
+  .droppable {
+    min-height: 150px; /* Adjust as needed */
+    padding: 15px;
+    border: 2px dashed gray;
+  }
+  
+
+  * Apply to all links inside Breadcrumb */
+.breadcrumb a {
+  text-decoration: none !important;
+  color: black;
+}
+
+/* Optional: Change color on hover */
+.breadcrumb a:hover {
+  color: #0052CC;
+}
