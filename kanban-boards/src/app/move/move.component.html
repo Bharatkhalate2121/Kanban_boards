@@ -1,0 +1,15 @@
+<div class="move-task-container">
+    <h3>Move Task</h3>
+    <form (ngSubmit)="moveTask()">
+        <label for="fromTodo">From To-Do ID:</label>
+        <input id="fromTodo" [(ngModel)]="fromTodoId" name="fromTodo" required />
+
+        <label for="toTodo">To To-Do ID:</label>
+        <input id="toTodo" [(ngModel)]="toTodoId" name="toTodo" required />
+
+        <label for="task">Task ID:</label>
+        <input id="task" [(ngModel)]="taskId" name="task" required />
+
+        <button (click)="moveTask()" type="submit"> Move Task</button>
+    </form>
+</div>

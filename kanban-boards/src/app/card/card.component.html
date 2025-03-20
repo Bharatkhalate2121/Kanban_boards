@@ -1,0 +1,34 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+        <p>ToDo</p>
+    </div>
+
+    <!-- <table class="task-list">
+        @for (task of tasks; track task.id) {
+        <tr class="task-item">
+            <td class="task-title">{{ task.title }}</td>
+            <td class="task-desc">{{ task.description }}</td>
+            <td>
+                <button class="btn-success">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-danger" (click)="deleteTask(task.id!)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+        <hr class="task-divider">
+        }
+    </table>
+ -->
+
+    <app-card-element *ngIf="showComponent"></app-card-element>
+    <div style="max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7px;
+  margin-bottom: 7px;">
+        <button class="btn p-2 b btn-success me-4" (click)="addTask()">+ Add Task </button>
+    </div>
+
+</div>

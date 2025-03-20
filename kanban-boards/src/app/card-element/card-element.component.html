@@ -1,0 +1,14 @@
+<div class="task-item d-flex align-items-center p-2">
+    <input type="text" class="form-control flex-grow-1 me-2" #title placeholder="Enter title here">
+
+    <button class="btn btn-sm btn-success me-1"
+        (click)="addTask(title.value, description.value); title.value=''; description.value='';">
+        <i class="fas fa-check"></i>
+    </button>
+
+    <button class="btn btn-sm btn-danger">
+        <i class="fas fa-times"></i>
+    </button>
+</div>
+
+<textarea class="form-control mt-2" #description placeholder="Enter Description here"></textarea>

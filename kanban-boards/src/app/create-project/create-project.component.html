@@ -1,0 +1,12 @@
+<h4 style="margin-left: 5%; margin-top: 5%;" mat-dailog-title>Create new Project</h4>
+<div style="margin-left: 5%; margin-top: 1%;" mat-dailog-content>
+    <input [(ngModel)]="projectname" placeholder="Enter project name">
+</div>
+<div style="margin-left: 5%; margin-top: 3%;" mat-dailog-actions>
+    <button style="padding: 20px; margin-right: 10px;" (click)="closePopup()" mat-raised-button color="warm">
+        close
+    </button>
+    <button style="padding: 20px;" (click)="createProject(projectname)" mat-raised-button color="warm">
+        Create
+    </button>
+</div>

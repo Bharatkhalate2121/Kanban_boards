@@ -1,0 +1,31 @@
+<div class="container" *ngIf="project">
+
+    <div style="margin: 10px;" *ngFor="let todo of project.todoarray">
+        <div class="card">
+            <div class="card-header">
+                <small>{{todo.id}}</small>
+                <p>Todo: {{ todo.title }}</p>
+                <button style="margin-right: 5px;" class="btn btn-primary" (click)="editToDo(todo.id!)"><i
+                        class="fas fa-edit"></i></button>
+                <button class="btn btn-danger" (click)="deleteToDo(todo.id)"><i class="fa fa-trash"
+                        aria-hidden="true"></i></button>
+            </div>
+
+            <div *ngIf="selectedTodoId === todo.id">
+                <app-card-element (taskAdded)="addTaskToTodo(selectedTodoId, $event)"></app-card-element>
+            </div>
+
+
+            <ul>
+                <li *ngFor="let task of todo.tasks">
+                    <small>{{task.id}} </small> <b>{{ task.title }}</b>: {{ task.description }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="btn btn-success" (click)="addToDo('heading')"> + Add ToDo</button>
+</div>
+
+<div>
+    <app-move></app-move>
+</div>
