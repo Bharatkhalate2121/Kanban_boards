@@ -8,17 +8,17 @@ export default function Header() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const location =useLocation();
-  
+  const location = useLocation();
+
 
   return (
-  
-      <>
+
+    <>
       <Navbar bg="dark" variant="dark" className="justify-content-between px-3">
         {/* Navbar Brand */}
         <Navbar.Brand href="#home">Projects</Navbar.Brand>
 
-        
+
 
         {/* New Project Button */}
         <Button style={{ backgroundColor: "#0052CC" }} onClick={handleShow}>
@@ -32,12 +32,12 @@ export default function Header() {
 
 
       <Navbar bg="white" variant="light" className="justify-content-start ps-5">
-        
 
-        
+
+
         <Breadcrumb className="ms-5">
           <Breadcrumb.Item style={{ textDecoration: "none", color: "white" }}>
-          <Link to="/" style={{ textDecoration: "none", color: "black" }}> <span className="fs-6" style={{ textDecoration: "none", color: "black" }}>Projects</span></Link>
+            <Link to="/" style={{ textDecoration: "none", color: "black" }}> <span className="fs-6" style={{ textDecoration: "none", color: "black" }}>Projects</span></Link>
           </Breadcrumb.Item>
           {location.pathname.includes("/board/") && (
             <Breadcrumb.Item style={{ textDecoration: "none", color: "black" }} >
@@ -46,8 +46,8 @@ export default function Header() {
           )}
         </Breadcrumb>
 
-        </Navbar>
-    
+      </Navbar>
+
     </>
   );
 }
